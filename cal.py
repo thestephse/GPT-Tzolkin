@@ -3,9 +3,9 @@
 from datetime import date
 
 def gregorian_to_dreamspell(gregorian_date):
-    dreamspell_start_date = date(1987, 7, 26)
+    dreamspell_start_date = date(1987, 8, 1)  # Using August 1st, 1987 as the start date
     days_since_dreamspell_start = (gregorian_date - dreamspell_start_date).days
-    dreamspell_kin = (days_since_dreamspell_start) % 260 + 1
+    dreamspell_kin = (days_since_dreamspell_start + 34) % 260 + 1  # Adjusting the initial offset
     return dreamspell_kin
 
 def kin_to_dreamspell(kin):
